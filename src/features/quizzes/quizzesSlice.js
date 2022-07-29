@@ -19,13 +19,13 @@ const options = {
     }
     //extra reducers here
 
-}
+};
 
 //thunk to quizz to the related topic
 export const addQuizAddQuizId = quiz => {
     const { quizId, name, topicId, cardIds } = quiz;
     return (dispatch) => {
-        dispatch(quizzesReducer.action.addQuiz(quiz));
+        dispatch(quizzesReducer.actions.addQuiz(quiz));
         dispatch(addQuizId( { quizId: quizId, topicId: topicId }))
     }
 };
